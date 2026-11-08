@@ -1,0 +1,122 @@
+{
+	"geode": "5.11.2",
+	"gd": {
+		"android": "2.2081",
+		"win": "2.2081",
+		"mac": "2.2081",
+		"ios": "2.2081"
+	},
+	"id": "litchin.problem-solver",
+	"name": "Problem Solver",
+	"version": "v1.0.0",
+	"developers": [
+		"Litchin"
+	],
+	"description": "Problem Bob fixes bugs, Buster Bob guides you through building a level, and Level Beater Bob coaches you through hard parts.",
+	"tags": [
+		"utility",
+		"editor",
+		"gameplay"
+	],
+	"resources": {
+		"sprites": [
+			"resources/*.png"
+		]
+	},
+	"settings": {
+		"title-problem-bob": {
+			"type": "title",
+			"name": "Problem Bob"
+		},
+		"menu-button": {
+			"type": "bool",
+			"name": "Main Menu Button",
+			"description": "Shows Bob's blue robot button next to the Geode button on the main menu.",
+			"default": true
+		},
+		"always-intro": {
+			"type": "bool",
+			"name": "Dig Out Every Time",
+			"description": "<cy>On</c>: Bob bursts out of the ground every time you press his button.\n<cy>Off</c>: only the first time each game session, after that he's already out.",
+			"default": true
+		},
+		"fix-announcements": {
+			"type": "bool",
+			"name": "Fix Announcements",
+			"description": "Bob pops up on the main menu to tell you about each bug he has fixed (once per fix).",
+			"default": true
+		},
+		"sfx": {
+			"type": "bool",
+			"name": "Sound Effects",
+			"default": true
+		},
+		"voice-blips": {
+			"type": "bool",
+			"name": "Talking Blips",
+			"description": "Little blip sounds while Bob's text types out.",
+			"default": true
+		},
+		"text-speed": {
+			"type": "string",
+			"name": "Text Speed",
+			"default": "Normal",
+			"one-of": [
+				"Slow",
+				"Normal",
+				"Fast",
+				"Instant"
+			]
+		},
+		"title-buster-bob": {
+			"type": "title",
+			"name": "Buster Bob (Editor)"
+		},
+		"editor-button": {
+			"type": "bool",
+			"name": "Editor Pause Button",
+			"description": "Shows Buster Bob's button in the editor pause menu (the <cy>||</c> button). This is how you open him on mobile.",
+			"default": true
+		},
+		"editor-key": {
+			"type": "keybind",
+			"name": "Open Buster Bob Key",
+			"description": "Press this in the editor to open Buster Bob (PC).",
+			"default": "F",
+			"category": "editor"
+		},
+		"title-level-beater": {
+			"type": "title",
+			"name": "Level Beater Bob"
+		},
+		"level-beater": {
+			"type": "bool",
+			"name": "Level Beater Bob",
+			"description": "Bob keeps count of where you die and pops in with tips when one part keeps getting you. He never plays for you, so your runs stay legit.",
+			"default": true
+		},
+		"deaths-before-tip": {
+			"type": "int",
+			"name": "Deaths Before A Tip",
+			"description": "How many deaths in the same part before Bob gives you a tip.",
+			"default": 8,
+			"min": 3,
+			"max": 100,
+			"control": {
+				"slider": false
+			}
+		},
+		"new-best-cheer": {
+			"type": "bool",
+			"name": "Cheer On New Best",
+			"description": "Bob cheers when you beat your best percent for this play session (from 10% up).",
+			"default": true
+		},
+		"in-practice": {
+			"type": "bool",
+			"name": "Tips In Practice Mode",
+			"description": "Also give tips while you're in practice mode.",
+			"default": false
+		}
+	}
+}
