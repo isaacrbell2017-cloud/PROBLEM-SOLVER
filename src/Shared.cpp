@@ -271,8 +271,8 @@ bool BobStage::init(CCSize const& size, float bobHeight) {
     m_bob = bob::createBob(bobHeight);
     m_baseScale = m_bob->getScale();
     m_bob->setAnchorPoint({ 0.5f, 0.f });
-    m_restPos = { size.width / 2.f, m_groundY - 4.f };
-    m_hiddenPos = { size.width / 2.f, m_groundY - bobHeight - 8.f };
+    m_restPos = CCPoint(size.width / 2.f, m_groundY - 4.f);
+    m_hiddenPos = CCPoint(size.width / 2.f, m_groundY - bobHeight - 8.f);
     m_bob->setPosition(m_hiddenPos);
     clip->addChild(m_bob);
     return true;
