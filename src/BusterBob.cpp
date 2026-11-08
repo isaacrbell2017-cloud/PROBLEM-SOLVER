@@ -223,6 +223,9 @@ void BusterBobPopup::arrived() {
 }
 
 void BusterBobPopup::talk(BobSpeech* speech, std::string const& text) {
+    // Only one speech box talks at a time, so finish the other page's line first.
+    if (speech != m_setupSpeech) m_setupSpeech->skip();
+    if (speech != m_guideSpeech) m_guideSpeech->skip();
     m_stage->startTalking();
     speech->say(text, [this]() { m_stage->stopTalking(); });
 }
